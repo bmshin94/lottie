@@ -298,7 +298,7 @@ export function CanvasProvider(props: { children: JSX.Element }) {
   const togglePlayback = () => setPlaying((v) => !v);
 
   const seek = (frame: number) => {
-    setCurrentFrame(Math.max(0, Math.min(frame, totalFrames())))
+    setCurrentFrame(Math.max(0, Math.min(frame, totalFrames() - 1)))
     dirty = true;
   };
 
